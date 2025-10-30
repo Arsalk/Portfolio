@@ -7,21 +7,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="sidebar">
+  <aside class="sidebar">
     <div class="logo"></div>
-    <ul>
-      <li><a href="index.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html" class="active">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" class="active">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
 
-  <section class="content">
-    <h1>Resume</h1>
-    <p>You can view or download my resume below:</p>
-    <a href="assets/ArsalKhansResume.PDF" class="btn" download>Download Resume</a>
-  </section>
+  <main class="content fade-in">
+    <section class="resume-section">
+      <h1>My Resume</h1>
+      <p>Click below to preview and download my full resume.</p>
+
+      <a href="ArsalKhansResume.pdf" target="_blank" class="resume-link">
+        <img src="assets/resume-preview.jpg" alt="Resume Preview" class="resume-preview" />
+      </a>
+
+      <a href="ArsalKhansResume.pdf" download class="btn">Download Resume (PDF)</a>
+    </section>
+  </main>
 </body>
 </html>
