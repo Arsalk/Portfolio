@@ -45,5 +45,29 @@
     </div>
   </div>
   </section>
+  <script>
+  const trail = [];
+  const maxSparks = 15;
+
+  document.addEventListener("mousemove", (e) => {
+    const spark = document.createElement("div");
+    spark.className = "spark";
+    spark.style.left = e.pageX + "px";
+    spark.style.top = e.pageY + "px";
+    document.body.appendChild(spark);
+    trail.push(spark);
+
+    if (trail.length > maxSparks) {
+      const old = trail.shift();
+      old.remove();
+    }
+
+    setTimeout(() => {
+      spark.style.opacity = 0;
+      spark.style.transform = "scale(0)";
+      setTimeout(() => spark.remove(), 300);
+    }, 200);
+  });
+</script>
 </body>
 </html>
