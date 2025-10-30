@@ -245,3 +245,42 @@ body {
     margin-left: 210px;
   }
 }
+
+.resume-section {
+  text-align: center;
+}
+
+.resume-preview {
+  width: 60%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 25px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-preview:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resume-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #6a0dad;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #8555ff;
+  transform: translateY(-2px);
+}
