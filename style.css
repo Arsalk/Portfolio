@@ -295,6 +295,28 @@ body {
   opacity: 0;
   transform: scaleY(0);
 }
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-card ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
 
 
 
