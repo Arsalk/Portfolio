@@ -350,28 +350,22 @@ body {
 /* =====================================
    SPARK TRAIL EFFECT
 ===================================== */
+/* === Spark Effect Styles === */
 .spark {
   position: absolute;
-  width: 6px;
-  height: 6px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffd700 0%, #ff8c00 80%, transparent 100%);
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(1);
-  animation: spark-fade 1s ease-out forwards;
+  background: gold;
+  box-shadow: 0 0 8px 2px orange, 0 0 16px 4px yellow;
+  animation: fadeSpark 0.6s ease-out forwards;
   z-index: 9999;
 }
 
-@keyframes spark-fade {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-  }
+@keyframes fadeSpark {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
 }
+
 
 
 
