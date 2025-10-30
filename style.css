@@ -314,5 +314,12 @@ body {
   display: flex;
   flex-direction: column; /* title always on top */
 }
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px minimum */
+  gap: 25px;
+  margin-top: 25px;
+}
+
 
 
