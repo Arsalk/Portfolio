@@ -45,29 +45,30 @@
     </div>
   </div>
   </section>
-  <script>
-  const trail = [];
-  const maxSparks = 15;
+<script>
+  const sparks = [];
+  const maxSparks = 30;
 
   document.addEventListener("mousemove", (e) => {
-    const spark = document.createElement("div");
-    spark.className = "spark";
-    spark.style.left = e.pageX + "px";
-    spark.style.top = e.pageY + "px";
-    document.body.appendChild(spark);
-    trail.push(spark);
+    for (let i = 0; i < 3; i++) {
+      const spark = document.createElement("div");
+      spark.className = "real-spark";
+      spark.style.left = e.pageX + "px";
+      spark.style.top = e.pageY + "px";
+      spark.style.setProperty("--x-move", (Math.random() - 0.5) * 40 + "px");
+      spark.style.setProperty("--y-move", (Math.random() - 0.5) * 40 + "px");
+      document.body.appendChild(spark);
+      sparks.push(spark);
 
-    if (trail.length > maxSparks) {
-      const old = trail.shift();
-      old.remove();
+      if (sparks.length > maxSparks) {
+        const old = sparks.shift();
+        old.remove();
+      }
+
+      setTimeout(() => spark.remove(), 600);
     }
-
-    setTimeout(() => {
-      spark.style.opacity = 0;
-      spark.style.transform = "scale(0)";
-      setTimeout(() => spark.remove(), 300);
-    }, 200);
   });
 </script>
+
 </body>
 </html>
