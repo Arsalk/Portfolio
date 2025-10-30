@@ -281,3 +281,37 @@ a.no-link-style:hover {
     margin-left: 210px;
   }
 }
+
+/* --- Animated Logo --- */
+.logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.logo::before {
+  content: "AK";
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logo::after {
+  content: "Arsal Khan";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .logo::before {
+  opacity: 0;
+}
+
+.sidebar:hover .logo::after {
+  opacity: 1;
+}
+
