@@ -310,3 +310,9 @@ body {
     margin-left: 210px;
   }
 }
+.skill-card {
+  display: flex;
+  flex-direction: column; /* title always on top */
+}
+
+
