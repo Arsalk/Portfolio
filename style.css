@@ -34,7 +34,40 @@ body {
   padding-top: 25px;
 }
 
-/* Sidebar nav */
+/* --- Animated Logo --- */
+.logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.logo::before {
+  content: "AK";
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logo::after {
+  content: "Arsal Khan";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .logo::before {
+  opacity: 0;
+}
+
+.sidebar:hover .logo::after {
+  opacity: 1;
+}
+
+/* --- Sidebar Nav --- */
 .sidebar ul {
   list-style: none;
   margin-top: 40px;
@@ -107,7 +140,7 @@ body {
 }
 
 /* ================================
-   FLOATING PANELS (cards)
+   FLOATING PANELS
 ================================ */
 .about-cards,
 .skills-cards,
@@ -144,15 +177,14 @@ body {
 }
 
 /* ================================
-   SECTION HEADINGS
+   SKILLS CATEGORY SPACING
 ================================ */
-.skills-category h2,
-.skills-category h3 {
-  color: #4c1d95;
-  margin-bottom: 15px;
-  font-weight: 600;
-  border-left: 4px solid #8b5cf6;
-  padding-left: 10px;
+.skills-category {
+  margin-top: 50px; /* spacing between categories */
+}
+
+.skills-category h2 {
+  margin-bottom: 20px; /* spacing between title and cards */
 }
 
 /* ================================
@@ -183,7 +215,7 @@ body {
 .back-arrow {
   position: fixed;
   top: 25px;
-  left: 120px; /* moved away from sidebar */
+  left: 260px; /* far enough from sidebar */
   background: linear-gradient(135deg, #a374ff, #c9a8ff);
   color: white;
   border-radius: 50%;
@@ -205,113 +237,3 @@ body {
   box-shadow: 0 6px 15px rgba(163, 116, 255, 0.4);
   background: linear-gradient(135deg, #b388ff, #d3bfff);
 }
-
-/* ================================
-   EDUCATION CARDS SPECIFIC
-================================ */
-.education-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.education-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 25px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-card h2 {
-  color: #5a4fcf;
-  margin-bottom: 10px;
-}
-
-.education-card ul {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-.education-card li {
-  margin-bottom: 6px;
-}
-
-/* ================================
-   REMOVE LINK UNDERLINE
-================================ */
-a.no-link-style {
-  color: inherit;
-  text-decoration: none;
-}
-
-a.no-link-style:hover {
-  color: #b388ff;
-  text-decoration: underline;
-}
-
-/* ================================
-   ANIMATION
-================================ */
-@keyframes floatIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-
-.content section,
-.content div {
-  animation: floatIn 0.5s ease;
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 70px;
-  }
-  .sidebar:hover {
-    width: 210px;
-  }
-  .content {
-    margin-left: 70px;
-    padding: 30px;
-  }
-  .sidebar:hover ~ .content {
-    margin-left: 210px;
-  }
-}
-
-/* --- Animated Logo --- */
-.logo {
-  font-size: 1.8em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  transition: all 0.4s ease;
-}
-
-.logo::before {
-  content: "AK";
-  position: absolute;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.logo::after {
-  content: "Arsal Khan";
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.sidebar:hover .logo::before {
-  opacity: 0;
-}
-
-.sidebar:hover .logo::after {
-  opacity: 1;
-}
-
