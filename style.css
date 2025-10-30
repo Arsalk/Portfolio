@@ -30,6 +30,7 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
+  justify-content: center; /* vertical centering */
   align-items: center;
   padding-top: 25px;
 }
@@ -70,8 +71,12 @@ body {
 /* --- Sidebar Nav --- */
 .sidebar ul {
   list-style: none;
-  margin-top: 40px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 40px;
 }
 
 .sidebar ul li {
@@ -79,25 +84,30 @@ body {
 }
 
 .sidebar ul li a {
+  font-family: 'Roboto Mono', monospace; /* unique font */
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center; /* horizontal centering */
+  display: block;
+  padding: 14px 20px;
+  margin: 8px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
   color: #e4e4e4;
   text-decoration: none;
-  display: block;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  transition: all 0.25s ease;
-  margin: 0 15px;
+  transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 
 .sidebar ul li a.active {
   background: #8b5cf6;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ================================
@@ -140,7 +150,7 @@ body {
 }
 
 /* ================================
-   FLOATING PANELS
+   FLOATING PANELS / CARDS
 ================================ */
 .about-cards,
 .skills-cards,
@@ -180,15 +190,15 @@ body {
    SKILLS CATEGORY SPACING
 ================================ */
 .skills-category {
-  margin-top: 50px; /* spacing between categories */
+  margin-top: 50px;
 }
 
 .skills-category h2 {
-  margin-bottom: 20px; /* spacing between title and cards */
+  margin-bottom: 20px;
 }
 
 /* ================================
-   BUTTONS
+   BUTTONS / LINKS
 ================================ */
 .link-btn,
 .btn {
@@ -210,12 +220,38 @@ body {
 }
 
 /* ================================
-   FLOATING BACK ARROW
+   RESUME PREVIEW
+================================ */
+.resume-section {
+  text-align: center;
+}
+
+.resume-preview {
+  width: 60%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 25px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-preview:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resume-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ================================
+   BACK ARROW (EDUCATION PAGE)
 ================================ */
 .back-arrow {
   position: fixed;
   top: 25px;
-  left: 260px; /* far enough from sidebar */
+  left: 260px; /* away from sidebar */
   background: linear-gradient(135deg, #a374ff, #c9a8ff);
   color: white;
   border-radius: 50%;
@@ -237,3 +273,59 @@ body {
   box-shadow: 0 6px 15px rgba(163, 116, 255, 0.4);
   background: linear-gradient(135deg, #b388ff, #d3bfff);
 }
+
+/* ================================
+   EDUCATION PAGE CARDS
+================================ */
+/* Education Page: uniform text color */
+.education-card,
+.education-card ul,
+.education-card li,
+.education-card p {
+  color: #2d2d38; /* dark grey for readability */
+}
+
+/* Sidebar tabs font and vertical alignment */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the tabs */
+  align-items: center;
+}
+
+.sidebar ul {
+  width: 100%;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: stretch;
+}
+
+.sidebar ul li a {
+  font-family: 'Roboto Mono', monospace; /* unique font for tabs */
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center; /* center text horizontally */
+  display: block;
+  padding: 14px 20px;
+  margin: 8px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.sidebar ul li a.active {
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 600;
+}
+
+
