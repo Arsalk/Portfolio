@@ -7,74 +7,50 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="sidebar">
-    <div class="logo">AK</div>
-    <ul>
-      <li><a href="index.html">About</a></li>
-      <li><a href="skills.html" class="active">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="content">
-    <h1>Skills</h1>
-
-    <div class="skills-category">
-      <h2>Languages</h2>
-      <div class="skills-cards">
-        <div class="skill-card">
-          <h3>C++</h3>
-          <p>Experienced in building efficient algorithms and competitive programming projects.</p>
-          <a href="projects.html#project1" class="link-btn">See Project</a>
-        </div>
-        <div class="skill-card">
-          <h3>Java</h3>
-          <p>Developed multiple OOP-based applications and coursework projects.</p>
-          <a href="projects.html#project2" class="link-btn">See Project</a>
-        </div>
-        <div class="skill-card">
-          <h3>Python</h3>
-          <p>Used for scripting, data analysis, and small automation tools.</p>
-          <a href="projects.html#project3" class="link-btn">See Project</a>
-        </div>
-        <div class="skill-card">
-          <h3>SQL</h3>
-          <p>Created and optimized queries for database-driven applications.</p>
-        </div>
-      </div>
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="short">AK</span>
+      <span class="full">Arsal Khan</span>
     </div>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
 
-    <div class="skills-category">
-      <h2>Web & Frontend</h2>
-      <div class="skills-cards">
-        <div class="skill-card">
-          <h3>HTML & CSS</h3>
-          <p>Built responsive and modern web pages using semantic HTML5 and CSS3.</p>
-          <a href="projects.html#project4" class="link-btn">See Project</a>
-        </div>
-        <div class="skill-card">
-          <h3>JavaScript</h3>
-          <p>Added interactivity and dynamic features to web applications.</p>
-          <a href="projects.html#project5" class="link-btn">See Project</a>
-        </div>
-      </div>
-    </div>
+  <main class="content fade-in">
+    <section class="card">
+      <h1>Skills</h1>
 
-    <div class="skills-category">
-      <h2>Productivity / Tools</h2>
-      <div class="skills-cards">
-        <div class="skill-card">
-          <h3>Microsoft Excel</h3>
-          <p>Experienced in formulas, pivot tables, and data visualization.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Office 365</h3>
-          <p>Proficient with Word, PowerPoint, and collaboration tools.</p>
-        </div>
+      <div class="skill-section">
+        <h2>Programming Languages</h2>
+        <p><strong>C++:</strong> Proficient in object-oriented programming, data structures, and algorithms. 
+          Built several console and GUI-based applications demonstrating efficient problem-solving. 
+          <a href="#">View Project →</a></p>
+
+        <p><strong>Java:</strong> Experienced with backend systems and Android development. 
+          Focused on writing clean, modular, and maintainable code. 
+          <a href="#">View Project →</a></p>
+
+        <p><strong>Python:</strong> Used for data analysis and scripting tasks. 
+          Capable of creating automation and machine learning prototypes. 
+          <a href="#">View Project →</a></p>
       </div>
-    </div>
-  </section>
+
+      <div class="skill-section">
+        <h2>Database & Productivity</h2>
+        <p><strong>SQL:</strong> Experienced in relational database design, queries, and optimization.</p>
+        <p><strong>Microsoft Excel & Office 365:</strong> Skilled at organizing data and preparing reports efficiently.</p>
+      </div>
+
+      <div class="skill-section">
+        <h2>Web Technologies</h2>
+        <p><strong>HTML, CSS, JavaScript:</strong> Strong understanding of responsive design and front-end development.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
