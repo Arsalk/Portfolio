@@ -34,40 +34,7 @@ body {
   padding-top: 25px;
 }
 
-/* --- Animated Logo --- */
-.logo {
-  font-size: 1.8em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  transition: all 0.4s ease;
-}
-
-.logo::before {
-  content: "AK";
-  position: absolute;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.logo::after {
-  content: "Arsal Khan";
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.sidebar:hover .logo::before {
-  opacity: 0;
-}
-
-.sidebar:hover .logo::after {
-  opacity: 1;
-}
-
-/* --- Sidebar Nav --- */
+/* Sidebar nav */
 .sidebar ul {
   list-style: none;
   margin-top: 40px;
@@ -113,7 +80,6 @@ body {
   justify-content: flex-start;
 }
 
-/* Floating window */
 .content > * {
   max-width: 900px;
   width: 90%;
@@ -141,12 +107,13 @@ body {
 }
 
 /* ================================
-   FLOATING PANELS
+   FLOATING PANELS (cards)
 ================================ */
 .about-cards,
 .skills-cards,
 .project-grid,
-.contact-cards {
+.contact-cards,
+.education-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
@@ -156,7 +123,8 @@ body {
 .about-card,
 .skill-card,
 .project-card,
-.contact-card {
+.contact-card,
+.education-card {
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -169,7 +137,8 @@ body {
 .about-card:hover,
 .skill-card:hover,
 .project-card:hover,
-.contact-card:hover {
+.contact-card:hover,
+.education-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 22px rgba(0,0,0,0.25);
 }
@@ -209,17 +178,84 @@ body {
 }
 
 /* ================================
+   FLOATING BACK ARROW
+================================ */
+.back-arrow {
+  position: fixed;
+  top: 25px;
+  left: 120px; /* moved away from sidebar */
+  background: linear-gradient(135deg, #a374ff, #c9a8ff);
+  color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px) scale(1.08);
+  box-shadow: 0 6px 15px rgba(163, 116, 255, 0.4);
+  background: linear-gradient(135deg, #b388ff, #d3bfff);
+}
+
+/* ================================
+   EDUCATION CARDS SPECIFIC
+================================ */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card h2 {
+  color: #5a4fcf;
+  margin-bottom: 10px;
+}
+
+.education-card ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.education-card li {
+  margin-bottom: 6px;
+}
+
+/* ================================
+   REMOVE LINK UNDERLINE
+================================ */
+a.no-link-style {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.no-link-style:hover {
+  color: #b388ff;
+  text-decoration: underline;
+}
+
+/* ================================
    ANIMATION
 ================================ */
 @keyframes floatIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 .content section,
@@ -245,206 +281,3 @@ body {
     margin-left: 210px;
   }
 }
-
-.resume-section {
-  text-align: center;
-}
-
-.resume-preview {
-  width: 60%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  margin: 25px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.resume-preview:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-}
-
-.resume-link {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #6a0dad;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #8555ff;
-  transform: translateY(-2px);
-}
-.education-card {
-  margin-top: 25px;
-  padding: 25px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  transform-origin: top;
-  transition: all 0.4s ease;
-  opacity: 0;
-  transform: scaleY(0);
-}
-.education-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.education-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.education-card ul {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-/* Remove blue link color + underline */
-a.no-link-style {
-  color: inherit;
-  text-decoration: none;
-}
-
-a.no-link-style:hover {
-  text-decoration: underline;
-  color: #b388ff; /* light violet hover effect */
-}
-
-/* Education page cards */
-.education-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.education-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.education-card ul {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-.back-link {
-  margin-top: 30px;
-}
-
-.back-link a {
-  color: #c7a4ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.back-link a:hover {
-  text-decoration: underline;
-}
-
-/* Floating SVG Back Arrow */
-.back-arrow {
-  position: absolute;
-  top: 25px;
-  left: 60px;
-  background: linear-gradient(135deg, #a374ff, #c9a8ff);
-  color: white;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.25s ease-in-out;
-}
-
-.back-arrow:hover {
-  transform: translateX(-4px) scale(1.08);
-  box-shadow: 0 6px 15px rgba(163, 116, 255, 0.4);
-  background: linear-gradient(135deg, #b388ff, #d3bfff);
-}
-/* --- Education Page Styles --- */
-.education-page {
-  background: #f7f7ff;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.back-arrow {
-  position: fixed;
-  top: 20px;
-  left: 120px; /* shifted right so it's not on sidebar */
-  font-size: 28px;
-  text-decoration: none;
-  color: #5a4fcf;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.back-arrow:hover {
-  transform: translateX(-4px);
-  color: #4439b8;
-}
-
-.content {
-  margin-left: 250px;
-  padding: 60px;
-  max-width: 800px;
-}
-
-.education-card {
-  background: white;
-  border-radius: 16px;
-  padding: 25px 30px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  margin-top: 25px;
-}
-
-.education-card h2 {
-  color: #4a3ccf;
-  margin-bottom: 10px;
-}
-
-.education-card ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.education-card li {
-  margin-bottom: 6px;
-}
-
-
-
-
-
-
