@@ -329,6 +329,24 @@ body {
     opacity: 0;
   }
 }
+.about-block {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  line-height: 1.8;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(168, 85, 247, 0.25);
+}
+
 
 
 
