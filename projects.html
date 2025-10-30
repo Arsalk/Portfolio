@@ -7,29 +7,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="logo">
-      <span class="short">AK</span>
-      <span class="full">Arsal Khan</span>
-    </div>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </aside>
+  <nav class="sidebar">
+    <div class="logo">AK</div>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main class="content fade-in">
-    <section class="card">
-      <h1>Projects</h1>
-      <div class="project-placeholder">[Project 1]</div>
-      <div class="project-placeholder">[Project 2]</div>
-      <div class="project-placeholder">[Project 3]</div>
-      <div class="project-placeholder">[Project 4]</div>
-      <div class="project-placeholder">[Project 5]</div>
-    </section>
-  </main>
+  <section class="content">
+    <h1>Projects</h1>
+
+    <div class="project-grid">
+      <div class="project-card" id="project1">
+        <h3>Project 1: C++ Algorithm</h3>
+        <p>Implemented a complex sorting and search algorithm optimized for performance.</p>
+        <a href="#" class="link-btn">View GitHub</a>
+      </div>
+      <div class="project-card" id="project2">
+        <h3>Project 2: Java Application</h3>
+        <p>OOP-based desktop app with multiple functional modules.</p>
+        <a href="#" class="link-btn">View GitHub</a>
+      </div>
+      <div class="project-card" id="project3">
+        <h3>Project 3: Python Automation</h3>
+        <p>Automated repetitive tasks and data analysis using Python scripts.</p>
+        <a href="#" class="link-btn">View GitHub</a>
+      </div>
+      <div class="project-card" id="project4">
+        <h3>Project 4: HTML/CSS Website</h3>
+        <p>Created a responsive multi-page website using HTML, CSS, and vanilla JS.</p>
+        <a href="#" class="link-btn">View GitHub</a>
+      </div>
+      <div class="project-card" id="project5">
+        <h3>Project 5: JS Interactive App</h3>
+        <p>Built a web app with interactive UI elements and dynamic functionality.</p>
+        <a href="#" class="link-btn">View GitHub</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
