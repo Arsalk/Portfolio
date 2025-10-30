@@ -296,41 +296,5 @@ body {
   transform: scaleY(0);
 }
 
-.education-card.visible {
-  opacity: 1;
-  transform: scaleY(1);
-}
 
-.hidden {
-  display: block;
-  opacity: 0;
-  transform: scaleY(0);
-}
-
-.education-card ul {
-  text-align: left;
-  margin-top: 10px;
-}
-
-.education-card li {
-  margin-bottom: 8px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #6a0dad;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.btn:hover {
-  background-color: #8555ff;
-  transform: translateY(-2px);
-}
 
