@@ -366,18 +366,16 @@ a.no-link-style:hover {
   text-decoration: underline;
 }
 
-/* Back Arrow Button */
+/* Floating SVG Back Arrow */
 .back-arrow {
   position: absolute;
   top: 25px;
   left: 60px;
   background: linear-gradient(135deg, #a374ff, #c9a8ff);
   color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,6 +388,7 @@ a.no-link-style:hover {
   box-shadow: 0 6px 15px rgba(163, 116, 255, 0.4);
   background: linear-gradient(135deg, #b388ff, #d3bfff);
 }
+
 
 
 
