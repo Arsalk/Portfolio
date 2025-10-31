@@ -226,3 +226,21 @@ body {
   .content { margin-left:70px; padding:30px; }
   .sidebar:hover ~ .content { margin-left:210px; }
 }
+/* ================================
+   SKILLS CATEGORY SPACING FIX
+================================ */
+.skills-category {
+  margin-top: 60px; /* increase space above the category title */
+}
+
+.skills-category h2 {
+  margin-bottom: 20px; /* spacing below the title */
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px; /* increase gap between cards */
+  margin-top: 25px;
+}
+
