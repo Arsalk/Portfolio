@@ -365,6 +365,51 @@ body {
   0% { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: scale(0); }
 }
+.social-buttons {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* distance from right edge */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10000; /* make sure it's above content */
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6d28d9;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  background: #8b5cf6;
+}
+
+.social-btn i {
+  pointer-events: none; /* makes the icon not interfere with hover */
+}
+
+/* Optional: different colors for each platform */
+.social-btn.insta { background: #e1306c; }
+.social-btn.linkedin { background: #0a66c2; }
+.social-btn.github { background: #333; }
+.social-btn.twitter { background: #1da1f2; }
+
+.social-btn.insta:hover { background: #c72c5c; }
+.social-btn.linkedin:hover { background: #084182; }
+.social-btn.github:hover { background: #111; }
+.social-btn.twitter:hover { background: #0d95e8; }
 
 
 
