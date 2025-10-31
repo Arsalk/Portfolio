@@ -253,10 +253,11 @@ body::before {
   left: 0;
   width: 100%; 
   height: 100%;
-  background: rgba(255, 255, 255, 0.15); /* adjust opacity to taste */
+  background: rgba(255, 255, 255, 0.1); /* 0.05–0.15 range is good */
   pointer-events: none;
   z-index: -1;
 }
+
 .about-block {
   background: rgba(255, 255, 255, 0.15); /* subtle translucent white */
   border-radius: 20px;
