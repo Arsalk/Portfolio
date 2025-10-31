@@ -227,13 +227,14 @@ body {
 }
 
 .resume-preview {
-  width: 60%;
-  max-width: 500px;
+  width: 80%;          /* was 60% */
+  max-width: 700px;    /* was 500px */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   margin: 25px 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .resume-preview:hover {
   transform: scale(1.03);
