@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arsal Khan | About Me</title>
+  <title>About | Arsal Khan</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
+  <!-- Sidebar -->
   <nav class="sidebar">
     <div class="logo"></div>
     <ul>
@@ -23,80 +23,62 @@
     </ul>
   </nav>
 
-  <section class="content">
-  <h1>Arsal Khan</h1>
-  <h2>Software Systems Major at Simon Fraser University</h2>
-
-  <div class="about-block">
-    <p>
-      I’m a <strong>Software Systems student</strong> at <strong>Simon Fraser University</strong> passionate about building efficient, scalable, and user-focused applications. I love exploring every layer of software development — from clean backend architecture to intuitive front-end design.
-    </p>
-    <br>
-    <p>
-      Over my studies, I’ve developed a solid foundation in algorithms, data structures, and full-stack development, using technologies like <strong>Python, C++, C, C#, Java, HTML, CSS, JavaScript, SQL, and React</strong>. I enjoy solving complex problems and constantly improving my approach to writing maintainable, high-performance code.
-    </p>
-    <br>
-    <p>
-      My current goal is to pursue <strong>software engineering co-op opportunities</strong> where I can contribute to impactful projects, collaborate with innovative teams, and continue learning from real-world challenges.
-    </p>
-    <br>
-    <p>
-      I’m passionate about sports and gaming. I follow <strong>Hockey</strong> closely, especially the Vancouver Canucks, enjoy watching and playing <strong>Football</strong>, and I’m an avid <strong>F1</strong> fan, keeping up with races and strategies. 
-      When I need a break, I dive into <strong>video games</strong>, exploring new stories and challenges across different genres.
-    </p>
+  <!-- Floating social icons -->
+  <div class="social-buttons">
+    <a href="https://www.linkedin.com/in/arsal-khan-4a15a4214/" target="_blank" class="social-btn linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/Arsalk" target="_blank" class="social-btn github">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://twitter.com/yourtwitter" target="_blank" class="social-btn twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com/yourinstagram" target="_blank" class="social-btn insta">
+      <i class="fab fa-instagram"></i>
+    </a>
   </div>
 
-  <div class="about-cards">
-      <div class="about-card">
-      <h3><a href="education.html" class="no-link-style">Education</a></h3>
-      <p>Currently pursuing Software Systems at Simon Fraser University, focusing on scalable software and algorithms.</p>
-    </div>
+  <main class="content">
+    <!-- Intro Block -->
+    <section class="about-section">
+      <div class="about-block">
+        <p>
+          Hi! My name is Arsal Khan. I am a software developer with interests in web development, AI, and cloud computing.
+        </p>
+      </div>
 
-    <div class="about-card">
-      <h3><a href="skills.html" class="no-link-style">Interests</a></h3>
-      <p>Full-stack development, automation, and exploring emerging technologies like AI-driven tools.</p>
-    </div>
-  </div>
-</section>
+      <!-- Example About Cards -->
+      <div class="about-cards">
+        <div class="about-card">
+          <h2>Outside of Programming</h2>
+          <ul>
+            <li>Hockey</li>
+            <li>Football</li>
+            <li>F1</li>
+            <li>Video Games</li>
+          </ul>
+        </div>
+      </div>
 
-<script>
-  const sparks = [];
-  const maxSparks = 30;
+      <!-- Skills Section -->
+      <div class="skills-category">
+        <h2>Productivity / Tools</h2>
+        <div class="skills-cards">
+          <div class="skill-card">
+            <h3>VS Code</h3>
+            <p>Daily IDE for projects.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Version control and collaboration.</p>
+          </div>
+          <!-- Add more skill cards as needed -->
+        </div>
+      </div>
+    </section>
+  </main>
 
-  document.addEventListener("mousemove", (e) => {
-    for (let i = 0; i < 3; i++) {
-      const spark = document.createElement("div");
-      spark.className = "real-spark";
-      spark.style.left = e.pageX + "px";
-      spark.style.top = e.pageY + "px";
-      spark.style.setProperty("--x-move", (Math.random() - 0.5) * 40 + "px");
-      spark.style.setProperty("--y-move", (Math.random() - 0.5) * 40 + "px");
-      document.body.appendChild(spark);
-      sparks.push(spark);
-
-      if (sparks.length > maxSparks) {
-        const old = sparks.shift();
-        old.remove();
-      }
-
-      setTimeout(() => spark.remove(), 600);
-    }
-  });
-</script>
-<div class="social-buttons">
-  <a href="https://www.instagram.com/arsalkhann_/" target="_blank" class="social-btn insta">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/arsal-khan-4a15a4214/" target="_blank" class="social-btn linkedin">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://github.com/Arsalk" target="_blank" class="social-btn github">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://x.com/ArsalKhann_" target="_blank" class="social-btn twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-</div>
-
+  <script src="sparks.js"></script>
 </body>
 </html>
