@@ -14,8 +14,8 @@ body {
   font-family: 'Roboto Mono', monospace;
   color: #f0f0f0;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #6d28d9, #c4b5fd);
-  transition: background 0.3s ease; /* smooth gradient shifts */
+  background: linear-gradient(135deg, #5b21b6, #a78bfa);
+  transition: background 0.3s ease;
 }
 
 
