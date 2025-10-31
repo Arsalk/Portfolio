@@ -1,19 +1,24 @@
-document.addEventListener("mousemove", function(e) {
+// sparks.js
+const sparks = [];
+const maxSparks = 30;
+
+document.addEventListener("mousemove", (e) => {
   for (let i = 0; i < 3; i++) {
-    const spark = document.createElement("span");
-    spark.classList.add("spark");
+    const spark = document.createElement("div");
+    spark.className = "real-spark";
 
-    // smaller size
-    const size = Math.random() * 2 + 2; // 2px to 4px
-    const xOffset = (Math.random() - 0.5) * 15;
-    const yOffset = (Math.random() - 0.5) * 15;
-
-    spark.style.width = `${size}px`;
-    spark.style.height = `${size}px`;
-    spark.style.left = `${e.pageX + xOffset}px`;
-    spark.style.top = `${e.pageY + yOffset}px`;
+    spark.style.left = e.pageX + "px";
+    spark.style.top = e.pageY + "px";
+    spark.style.setProperty("--x-move", (Math.random() - 0.5) * 40 + "px");
+    spark.style.setProperty("--y-move", (Math.random() - 0.5) * 40 + "px");
 
     document.body.appendChild(spark);
+    sparks.push(spark);
+
+    if (sparks.length > maxSparks) {
+      const old = sparks.shift();
+      old.remove();
+    }
 
     setTimeout(() => spark.remove(), 600);
   }
