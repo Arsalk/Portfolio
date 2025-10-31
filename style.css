@@ -257,3 +257,14 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+.about-block {
+  background: rgba(255, 255, 255, 0.15); /* subtle translucent white */
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  line-height: 1.8;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* gives slight depth */
+  backdrop-filter: blur(8px);
+}
+
