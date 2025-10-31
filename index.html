@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Arsal Khan</title>
+  <title>Arsal Khan | About Me</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
 </head>
 <body>
-  <aside class="sidebar">
+  <nav class="sidebar">
     <div class="logo"></div>
     <ul>
       <li><a href="index.html" class="active">About</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
-      <li><a href="education.html">Education</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </aside>
+  </nav>
 
-  <!-- Floating social icons -->
-  <div class="social-buttons">
-    <a href="https://www.linkedin.com/in/arsal-khan-4a15a4214/" target="_blank" class="social-btn linkedin">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://github.com/Arsalk" target="_blank" class="social-btn github">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://twitter.com/" target="_blank" class="social-btn twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.instagram.com/" target="_blank" class="social-btn insta">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
+  <section class="content">
+  <h1>Arsal Khan</h1>
+  <h2>Software Systems Major at Simon Fraser University</h2>
 
-<main class="content">
-  <!-- Intro block -->
   <div class="about-block">
     <p>
-      I’m a Software Systems student at Simon Fraser University passionate about building efficient, scalable, and user-focused applications. I love exploring every layer of software development — from clean backend architecture to intuitive front-end design.
+      I’m a <strong>Software Systems student</strong> at <strong>Simon Fraser University</strong> passionate about building efficient, scalable, and user-focused applications. I love exploring every layer of software development — from clean backend architecture to intuitive front-end design.
     </p>
     <br>
     <p>
-      Over my studies, I’ve developed a solid foundation in algorithms, data structures, and full-stack development, using technologies like Python, C++, JavaScript, and React. I enjoy solving complex problems and constantly improving my approach to writing maintainable, high-performance code.
+      Over my studies, I’ve developed a solid foundation in algorithms, data structures, and full-stack development, using technologies like <strong>Python, C++, C, C#, Java, HTML, CSS, JavaScript, SQL, and React</strong>. I enjoy solving complex problems and constantly improving my approach to writing maintainable, high-performance code.
     </p>
     <br>
     <p>
-      My current goal is to pursue software engineering co-op opportunities where I can contribute to impactful projects, collaborate with innovative teams, and continue learning from real-world challenges.
+      My current goal is to pursue <strong>software engineering co-op opportunities</strong> where I can contribute to impactful projects, collaborate with innovative teams, and continue learning from real-world challenges.
     </p>
     <br>
     <p>
@@ -60,54 +46,58 @@
     </p>
   </div>
 
-  <!-- =============================
-       Education Cards
-  ============================= -->
-  <div class="education-cards">
-    <div class="education-card">
-      <h2>Simon Fraser University</h2>
-      <p>Bachelor of Science in Software Systems</p>
-      <ul>
-        <li>Relevant Courses: Algorithms, Data Structures, Operating Systems</li>
-        <li>GPA: 3.8/4.0</li>
-        <li>Dean’s List: 2023</li>
-      </ul>
-    </div>
-    <div class="education-card">
-      <h2>High School Name</h2>
-      <p>High School Diploma</p>
-      <ul>
-        <li>Graduated: 2021</li>
-        <li>Clubs: Coding Club, Robotics Team</li>
-        <li>Honors: Valedictorian</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- =============================
-       Interests / Outside of Programming
-  ============================= -->
   <div class="about-cards">
-    <div class="about-card">
-      <h2>Hockey</h2>
-      <p>Following NHL closely, especially Vancouver Canucks.</p>
+      <div class="about-card">
+      <h3><a href="education.html" class="no-link-style">Education</a></h3>
+      <p>Currently pursuing Software Systems at Simon Fraser University, focusing on scalable software and algorithms.</p>
     </div>
+
     <div class="about-card">
-      <h2>Football</h2>
-      <p>Enjoy playing and watching football matches regularly.</p>
-    </div>
-    <div class="about-card">
-      <h2>F1</h2>
-      <p>Passionate about Formula 1, tracking races, drivers, and strategies.</p>
-    </div>
-    <div class="about-card">
-      <h2>Video Games</h2>
-      <p>Exploring different game genres for storytelling and challenges.</p>
+      <h3><a href="skills.html" class="no-link-style">Interests</a></h3>
+      <p>Full-stack development, automation, and exploring emerging technologies like AI-driven tools.</p>
     </div>
   </div>
-</main>
+</section>
 
+<script>
+  const sparks = [];
+  const maxSparks = 30;
 
-  <script src="sparks.js"></script>
+  document.addEventListener("mousemove", (e) => {
+    for (let i = 0; i < 3; i++) {
+      const spark = document.createElement("div");
+      spark.className = "real-spark";
+      spark.style.left = e.pageX + "px";
+      spark.style.top = e.pageY + "px";
+      spark.style.setProperty("--x-move", (Math.random() - 0.5) * 40 + "px");
+      spark.style.setProperty("--y-move", (Math.random() - 0.5) * 40 + "px");
+      document.body.appendChild(spark);
+      sparks.push(spark);
+
+      if (sparks.length > maxSparks) {
+        const old = sparks.shift();
+        old.remove();
+      }
+
+      setTimeout(() => spark.remove(), 600);
+    }
+  });
+</script>
+<div class="social-buttons">
+  <a href="https://www.instagram.com/arsalkhann_/" target="_blank" class="social-btn insta">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/arsal-khan-4a15a4214/" target="_blank" class="social-btn linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://github.com/Arsalk" target="_blank" class="social-btn github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://x.com/ArsalKhann_" target="_blank" class="social-btn twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+</div>
+<script src="gradient-bg.js"></script>
+
 </body>
 </html>
