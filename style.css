@@ -9,13 +9,15 @@
 }
 
 body {
-  display: flex;
   min-height: 100vh;
-  background: linear-gradient(135deg, #6d28d9 0%, #c4b5fd 100%);
-  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
   color: #f0f0f0;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #6d28d9, #c4b5fd);
+  transition: background 0.3s ease; /* smooth gradient shifts */
 }
+
 
 /* ================================
    SIDEBAR
